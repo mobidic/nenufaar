@@ -310,6 +310,6 @@ Depending on -a (default, no annotation), the vcf is annotated with:
 
 France
 
-![](img/mobidic.png)
+![](img/mobi2.png)
 
 --------------------------------------------------------------------------------

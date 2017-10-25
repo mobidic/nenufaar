@@ -299,9 +299,9 @@ ckFileSz() {
 ###
 
 
-echo "COMMAND: nohup sh nenufaar.sh -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -id ${ID} -b "
+echo "COMMAND: nohup ${SHELL} ${NENUFAAR} -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -id ${ID} -b "
 
-nohup ${SHELL} nenufaar.sh -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -id ${ID} -b
+nohup ${SHELL} ${NENUFAAR} -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -id ${ID} -b
 
 #I often have an error wifth a fi at the end of nenufaar script, so commented until fixed
 STATUS=$?
@@ -359,9 +359,9 @@ rm ${BAIS_FILES[@]}
 ###nenufaar generate single VCF for all samples
 ###
 
-echo "COMMAND: nohup sh nenufaar.sh -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -a ${ANNOTATOR} -f ${FILTER} -up ${USE_PLATYPUS} ${LIST} -vc"
+echo "COMMAND: nohup ${SHELL} nenufaar.sh -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -a ${ANNOTATOR} -f ${FILTER} -up ${USE_PLATYPUS} ${LIST} -vc"
 
-nohup ${SHELL} nenufaar.sh -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -a ${ANNOTATOR} -f ${FILTER} -up ${USE_PLATYPUS} ${LIST} -vc
+nohup ${SHELL} ${NENUFAAR} -i ${INPUT_PATH} -o ${OUTPUT_PATH} -r ${REF_PATH} -snp ${SNP_PATH} -indel1 ${INDEL1} -indel2 ${INDEL2} -g ${GENOME} -dcov ${DCOV} -c ${CALLER} -p ${PROTOCOL} -hsm ${HSMETRICS} -a ${ANNOTATOR} -f ${FILTER} -up ${USE_PLATYPUS} ${LIST} -vc
 
 STATUS=$?
 if [ "${STATUS}" -ne '0' ];then
