@@ -2,6 +2,8 @@
 
 DNA NGS pipeline
 
+[![DOI](https://zenodo.org/badge/105276293.svg)](https://zenodo.org/badge/latestdoi/105276293)
+
 - [Goals](#goals)
 - [Install & Config](#install--config)
 - [Warning](#warning)
